@@ -4,6 +4,10 @@ A modern web application for managing business card and lead information collect
 
 ---
 
+## Live Demo- https://sales-card-4c69f.web.app
+gmail- admin@gmail.com/sales@gmail.com
+password- 123456
+
 ##  Features
 
 ### Authentication
