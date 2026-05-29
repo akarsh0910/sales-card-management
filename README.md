@@ -1,16 +1,182 @@
-# React + Vite
+# Sales Card Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for managing business card and lead information collected by sales representatives. The system allows salespersons to submit business card details, while managers can view, search, filter, and export all collected contacts into Excel format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Features
 
-## React Compiler
+### Authentication
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Firebase Email/Password Authentication
+* Separate Admin and Salesperson login
+* Secure logout functionality
 
-## Expanding the ESLint configuration
+### Salesperson Dashboard
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Add new business card details
+* Store lead information in Firebase Firestore
+* Clean and responsive form interface
+
+### Admin Dashboard
+
+* View all submitted business card records
+* Search contacts by:
+
+  * Company Name
+  * Person Name
+  * Address
+  * Salesperson
+* Download records as Excel (.xlsx) file
+* Responsive data table
+
+### Database
+
+* Firebase Firestore integration
+* Real-time cloud storage for contact records
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+* React Router DOM
+
+### Backend & Database
+
+* Firebase Authentication
+* Firebase Firestore
+
+### Additional Libraries
+
+* XLSX (Excel Export)
+* React Icons
+
+---
+
+##  Project Structure
+
+```text
+src/
+│
+├── pages/
+│   ├── Login.jsx
+│   ├── SalesDashboard.jsx
+│   └── AdminDashboard.jsx
+│
+├── services/
+│   ├── authService.js
+│   └── cardService.js
+│
+├── firebase/
+│   └── firebaseConfig.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+##  Workflow
+
+### Salesperson
+
+1. Login to the system
+2. Enter business card details:
+
+   * Company Name
+   * Person Name
+   * Contact Number
+   * Address
+   * Place Received
+3. Submit the form
+4. Data is stored in Firebase Firestore
+
+### Manager/Admin
+
+1. Login to the Admin Dashboard
+2. View all submitted business card records
+3. Search and filter records
+4. Export all records to Excel
+
+---
+
+##  Firebase Services Used
+
+* Firebase Authentication
+* Cloud Firestore
+* Firebase Hosting (for deployment)
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/sales-card-management.git
+```
+
+Navigate to project directory:
+
+```bash
+cd sales-card-management
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+---
+
+##  Future Enhancements
+
+* Business card image upload
+* OCR-based card scanning
+* Protected routes
+* Role-based access control
+* Dashboard analytics
+* Toast notifications
+* Advanced filtering
+* Mobile-first improvements
+* Activity tracking
+
+---
+
+##  Use Case
+
+This application is designed for organizations where sales teams collect business cards and lead information during meetings, exhibitions, conferences, and client visits. It helps managers maintain a centralized contact database and easily export collected leads for follow-up and reporting purposes.
+
+---
+
+## Author
+
+Akarsh Singh Sisoudia
+
+* Email: [akarshsisoudia@gmail.com](mailto:akarshsisoudia@gmail.com)
+* Location: Lucknow, Uttar Pradesh, India
+
+---
+
+##  License
+
+This project is created for educational, portfolio, and demonstration purposes.
